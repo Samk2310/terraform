@@ -27,7 +27,7 @@ resource "azurerm_linux_virtual_machine" "oag_worker_vm" {
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
-    managed_disk_id      = var.oag_disk_id # Re-use the prepared managed disk
+    #managed_disk_id      = var.oag_disk_id # Re-use the prepared managed disk
   }
 
   source_image_id = var.oag_disk_id # Re-use the prepared managed disk
