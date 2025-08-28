@@ -1,0 +1,6 @@
+environment         = "dev"
+location            = "East US"
+resource_group_name = "oag-dev-rg"
+virtual_network_name = "oag-dev-vnet"
+oag_image_uri       = "/subscriptions/<YOUR_SUB_ID>/resourceGroups/<YOUR_RG>/providers/Microsoft.Compute/images/oag-dev-image"
+hostname            = "oag-dev-worker-01"
