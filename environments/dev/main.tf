@@ -1,5 +1,5 @@
 module "oag_worker" {
-  source       = "../../modules/oag-worker"
+  source       = "../../modules/oag_worker"
   environment  = var.environment
   location     = var.location
   vnet_name    = var.vnet_name
