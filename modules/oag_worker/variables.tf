@@ -1,20 +1,15 @@
 variable "environment" {
-  description = "The deployment environment (e.g., dev, prod)."
-  type        = string
-}
-
-variable "resource_group_name" {
-  description = "The name of the Azure Resource Group."
+  description = "The environment (e.g., dev, prod)."
   type        = string
 }
 
 variable "location" {
-  description = "The Azure region where resources will be deployed."
+  description = "The Azure region to deploy resources."
   type        = string
 }
 
-variable "virtual_network_name" {
-  description = "The name of the virtual network."
+variable "vnet_name" {
+  description = "The name of the existing VNet."
   type        = string
 }
 
@@ -23,19 +18,24 @@ variable "subnet_id" {
   type        = string
 }
 
-variable "hostname" {
-  description = "The hostname for the OAG worker node."
+variable "oag_admin_ip" {
+  description = "The private IP address of the OAG admin node."
   type        = string
 }
 
-variable "oag_image_uri" {
-  description = "The URI of the OAG managed disk image."
+variable "oag_token" {
+  description = "The shared token from the OAG admin node to join the cluster."
   type        = string
+  sensitive   = true
 }
 
-variable "vm_size" {
-  description = "The size of the virtual machine."
-  type        = string
-  default     = "Standard_DS2_v2"
+variable "worker_count" {
+  description = "The number of worker nodes to deploy."
+  type        = number
+  default     = 1
 }
 
+variable "oag_disk_id" {
+  description = "The ID of the managed disk containing the OAG image."
+  type        = string
+}
