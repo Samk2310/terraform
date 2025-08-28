@@ -1,6 +1,8 @@
-environment         = "dev"
-location            = "East US"
-resource_group_name = "oag-dev-rg"
-virtual_network_name = "oag-dev-vnet"
-oag_image_uri       = "/subscriptions/<YOUR_SUB_ID>/resourceGroups/<YOUR_RG>/providers/Microsoft.Compute/images/oag-dev-image"
-hostname            = "oag-dev-worker-01"
+environment    = "dev"
+location       = "East US"
+vnet_name      = "oag-dev-vnet"
+subnet_id      = "/subscriptions/<SUB_ID>/resourceGroups/oag-dev-rg/providers/Microsoft.Network/virtualNetworks/oag-dev-vnet/subnets/oag-worker-subnet"
+oag_admin_ip   = "10.0.1.4" # Private IP of your OAG dev admin node
+oag_token      = "your_dev_token"
+worker_count   = 1
+oag_disk_id    = "/subscriptions/<SUB_ID>/resourceGroups/oag-images/providers/Microsoft.Compute/disks/oag-managed-disk"
