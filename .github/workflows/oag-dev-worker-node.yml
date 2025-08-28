@@ -33,7 +33,7 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: 1.8.0 # Specify your required Terraform version
+          terraform_version: 4.3.34 # Specify your required Terraform version
 
       # Initialize a new or existing Terraform working directory
       - name: Terraform Init
