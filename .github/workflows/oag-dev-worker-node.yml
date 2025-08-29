@@ -43,7 +43,7 @@ jobs:
       # Generate an execution plan for Terraform to show proposed changes
       - name: Terraform Plan
         id: plan
-        run: terraform plan -no-color
+        run: terraform plan -out=tfplan -no-color
 
       # Apply the execution plan to provision infrastructure
       - name: Terraform Apply
