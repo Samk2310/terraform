@@ -5,6 +5,6 @@ terraform {
     resource_group_name  = "terraform-state-rg"
     storage_account_name = "terraformstateoag"
     container_name       = "tfstate"
-    key                  = "oag-worker.terraform.tfstate"
+    key                  = "terraform.tfstate"
   }
 }
